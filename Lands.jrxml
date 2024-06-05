@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Lands" pageWidth="670" pageHeight="595" orientation="Landscape" columnWidth="630" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="e115bc59-fd0f-446b-a585-04725e27d7f0">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[select * from  architecture_firm."Land"]]>
+	</queryString>
+	<field name="Land_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Land_ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="Land_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Land"/>
+	</field>
+	<field name="Owner_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Owner_ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="Owner_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Land"/>
+	</field>
+	<field name="Soil_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Soil_type"/>
+		<property name="com.jaspersoft.studio.field.label" value="Soil_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Land"/>
+	</field>
+	<field name="Location" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Location"/>
+		<property name="com.jaspersoft.studio.field.label" value="Location"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Land"/>
+	</field>
+	<field name="Land_papers" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="Land_papers"/>
+		<property name="com.jaspersoft.studio.field.label" value="Land_papers"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Land"/>
+	</field>
+	<field name="Area" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Area"/>
+		<property name="com.jaspersoft.studio.field.label" value="Area"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Land"/>
+	</field>
+	<background>
+		<band height="575" splitType="Stretch">
+			<image vAlign="Bottom">
+				<reportElement positionType="Float" x="-20" y="66" width="105" height="409" uuid="64ca4020-b604-4de9-9ed1-921b74cfd593"/>
+				<imageExpression><![CDATA["waves.jpg"]]></imageExpression>
+			</image>
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="475" width="105" height="100" backcolor="#0099FF" uuid="6eb7cb61-0dd7-47a8-8475-5fa6c3a348dc"/>
+				<textField>
+					<reportElement style="Column header" x="0" y="0" width="104" height="73" forecolor="#FFFFFF" uuid="db8457c8-99e9-434f-b439-2d400dff2bcd"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="58" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement mode="Transparent" x="20" y="73" width="70" height="1" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="db6d7ead-4383-4f8c-81cf-1e3064eb6924"/>
+				</line>
+			</frame>
+		</band>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="802" height="67" forecolor="#0099FF" uuid="efb59739-fcd2-445a-b016-4bec4cd24111"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="54" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Land information]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="90" y="67" width="568" height="37" forecolor="#0099FF" uuid="83576702-94d0-4df6-9109-f451adf998a4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Check information for each land]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="85" y="1" width="551" height="20" backcolor="#0099FF" uuid="cd6f8fe8-eda2-4438-a333-f06f05a706cf"/>
+				<staticText>
+					<reportElement style="Column header" x="-10" y="0" width="88" height="15" uuid="f86298a5-4166-485a-b92c-07e5e94089a5">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="29b6b8c9-fcf9-4c45-af4e-9b9e2626f537"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Land ID]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="102" y="0" width="88" height="15" uuid="6fe1838a-aa7b-4ec5-96e1-943b2d2b76be">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="689ec3e2-c171-4b5d-b172-b55571aa7f90"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Owner ID]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="218" y="0" width="88" height="15" uuid="988e4e11-9adf-4f83-98f1-0bcdda13d5fa">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="50d47d6f-b122-4d2e-a844-0191d9886f02"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Soil type]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="344" y="0" width="88" height="15" uuid="25abe6c2-187f-485a-8fed-99050030eba9">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="72c86cc9-868c-4170-91fd-de562ac5bc4c"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Location]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="435" y="0" width="110" height="15" uuid="5cc20616-ca94-45e5-8dc5-8ee7509b2a79">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88f2182d-df25-4950-83dc-fb39e40f798d"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Area]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement x="97" y="1" width="539" height="15" uuid="89a3da05-fdde-4ffe-965f-cc476f72e3ab"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="117" height="15" uuid="bc332282-ff63-483a-9a33-731375e6d0b3">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d49367c2-c2c2-4803-8693-a3b94d8bbe02"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{Land_ID}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="117" y="0" width="117" height="15" uuid="6bb7ef7c-70eb-4688-9557-9b290e3813a3">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19f8f46e-07f3-4e71-bbab-d2e215a5e629"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{Owner_ID}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="234" y="0" width="117" height="15" uuid="0a9517e2-ce98-4081-9875-3b4e86fdc5a5">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="58e40a14-30e7-4e7d-81c7-192ca66df7b5"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{Soil_type}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="351" y="0" width="117" height="15" uuid="cabcd65a-bf93-45ac-9b2d-b8b2c9a42473">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d1ae14e4-20e5-4404-875a-28ceb10adcf2"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{Location}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="422" y="0" width="117" height="15" uuid="b51e97d7-790b-4185-b7a8-0219ca48cd3e">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b0c3b5d6-e362-4068-9b5c-be90582dc8de"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{Area}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="90" y="0" width="154" height="20" forecolor="#0099FF" uuid="d89d33e9-7f27-490b-ae76-08dbbe4db745"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Land information report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="273" y="1" width="202" height="20" forecolor="#0099FF" uuid="31b11963-465f-4eb0-8d5c-f5e7bf6a33b0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Al_Najah architecture Firm]]></text>
+			</staticText>
+			<textField pattern="h:mm a">
+				<reportElement x="510" y="20" width="126" height="17" forecolor="#0099FF" uuid="378f5dba-fda6-4e98-ad7b-633bc52fcaae"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="503" y="1" width="131" height="20" forecolor="#0099FF" uuid="138ccd24-3ff6-470d-a008-01e210b142cc"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
